@@ -13,10 +13,16 @@ public class StandardCalculator{
     }
 
     public void add(int a, int b){
+        long temp = (long) a + (long) b;
+        if (temp > Integer.MAX_INT)
+            throw new ArithmeticException()
         result = a + b;
     }
 
     public void subtract(int a, int b){
+        long temp = (long) a - (long) b;
+        if (temp < Integer.MIN_INT)
+            throw new ArithmeticException()
         return = a - b;
     }
 }
